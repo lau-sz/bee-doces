@@ -1,26 +1,25 @@
-# 🐝 Bee Doces
+# Bee Doces
 
 Site institucional da **Bee Doces**, confeitaria capixaba tradicional desde 1980.
 
 Projeto desenvolvido como atividade da disciplina **Fundamentos de Tecnologia da Informação** — UVV (Universidade de Vila Velha).
 
-## 🌐 Site no ar
-[Acesse aqui](https://SEU-USUARIO.github.io/bee-doces/)
-> *Substitua `SEU-USUARIO` pelo seu usuário do GitHub após publicar.*
+## Site no ar
+[Acesse aqui](https://lau-sz.github.io/bee-doces/)
 
-## 🛠️ Tecnologias
+## Tecnologias
 - HTML5
 - CSS3
 - Bootstrap 5.3.8
 - Google Fonts (Satisfy, Lora, Playfair Display)
 
-## 📱 Responsividade
+## Responsividade
 O site se adapta a três tamanhos de tela:
 - 📱 Celular (até 575px)
 - 📱 Tablet (576px – 991px)
 - 💻 Desktop (992px ou mais)
 
-## 📂 Estrutura
+## Estrutura
 ```
 bee-doces/
 ├── index.html
@@ -36,5 +35,5 @@ bee-doces/
     └── video.mp4
 ```
 
-## ✍️ Autora
-Laura — UVV
+## Autora
+Laura Oliviecki Stefanon — UVV
