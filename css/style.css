@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Satisfy&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ===== variáveis ===== */
+:root {
+  --vermelho:     #8B1A1A;
+  --vermelho-lt:  #B22222;
+  --marrom:       #3E1F0D;
+  --marrom-md:    #6B3520;
+  --marrom-lt:    #A0522D;
+  --creme:        #FAF3E0;
+  --creme-dk:     #EFE3C8;
+  --texto:        #2C1200;
+  --texto-suave:  #6B3520;
+}
+
+/* ===== base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: var(--creme);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--marrom);
+}
+
+header .navbar {
+  background-color: var(--marrom) !important;
+  border-bottom: 3px solid var(--vermelho);
+  padding: 1rem 0;
+}
+
+header .navbar-brand {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8rem;
+  color: var(--creme) !important;
+  letter-spacing: 0.02em;
+}
+
+header .navbar-brand:hover {
+  color: var(--vermelho-lt) !important;
+}
+
+header .nav-link {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--creme) !important;
+  padding: 0.5rem 0.8rem !important;
+}
+
+header .nav-link:hover,
+header .nav-link:focus {
+  color: var(--vermelho-lt) !important;
+  text-decoration: underline;
+}
+
+header .navbar-toggler {
+  border-color: var(--creme);
+  padding: 0.4rem 0.6rem;
+}
+
+header .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(178, 34, 34, 0.4);
+}
+
+header .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===== HERO ===== */
+.header-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-hero img {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.header-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65%;
+  background: linear-gradient(to bottom, transparent, rgba(62,31,13,0.82) 60%, rgba(62,31,13,0.95));
+  pointer-events: none;
+}
+
+.header-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 2.5rem 1rem 3rem;
+}
+
+.header-texto h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: clamp(3rem, 9vw, 7rem);
+  color: var(--creme);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-shadow: 2px 3px 0px var(--marrom);
+  margin: 0;
+}
+
+.header-texto .lead {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--creme-dk);
+  margin-top: 0.8rem;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+/* ===== TÍTULOS DE SEÇÃO ===== */
+section h2 {
+  font-family: 'Satisfy', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--vermelho);
+}
+
+section p {
+  font-size: 1.05rem;
+  color: var(--texto-suave);
+  text-align: justify;
+}
+
+/* ===== SOBRE ===== */
+#sobre {
+  background-color: var(--creme);
+}
+
+#sobre h3 {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.8rem;
+  color: var(--marrom);
+}
+
+.lista-sobre {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: var(--texto-suave);
+}
+
+.lista-sobre li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== GALERIA ===== */
+#galeria {
+  background-color: var(--creme-dk);
+}
+
+#galeria h2 {
+  color: var(--marrom);
+}
+
+.galeria-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 3px solid var(--vermelho);
+  transition: transform 0.3s ease;
+}
+
+.galeria-img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== VÍDEO ===== */
+#video {
+  background-color: var(--creme);
+}
+
+.video-wrapper video {
+  border: 3px solid var(--vermelho);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrapper figcaption {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+/* ===== CARDÁPIO ===== */
+#cardapio {
+  background-color: var(--marrom);
+  border-top: 4px double var(--vermelho);
+  border-bottom: 4px double var(--vermelho);
+}
+
+#cardapio h2 {
+  color: var(--creme);
+}
+
+.btn-cardapio {
+  padding: 0.9rem 2.5rem;
+  background-color: var(--vermelho);
+  color: var(--creme);
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  border: 2px solid var(--creme-dk);
+  border-radius: 0;
+}
+
+.btn-cardapio:hover,
+.btn-cardapio:focus {
+  background-color: var(--vermelho-lt);
+  color: var(--creme);
+  border-color: var(--creme);
+}
+
+/* ===== LOJAS ===== */
+#lojas {
+  background-color: var(--creme-dk);
+}
+
+#lojas h2 {
+  color: var(--marrom);
+}
+
+#lojas > .container > p {
+  color: var(--marrom-md);
+}
+
+.tabela-lojas {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  background-color: var(--creme);
+}
+
+.tabela-lojas thead tr {
+  background-color: var(--vermelho);
+  color: var(--creme);
+}
+
+.tabela-lojas thead th {
+  padding: 0.9rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border: 1px solid var(--vermelho-lt);
+  background-color: var(--vermelho);
+  color: var(--creme);
+}
+
+.tabela-lojas tbody tr {
+  background-color: var(--creme);
+}
+
+.tabela-lojas tbody tr:nth-child(even) {
+  background-color: #f0e4c8;
+}
+
+.tabela-lojas tbody td {
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--creme-dk);
+  color: var(--texto-suave);
+  vertical-align: top;
+  line-height: 1.7;
+}
+
+.tabela-lojas a {
+  color: var(--vermelho);
+  font-weight: 500;
+}
+
+.tabela-lojas a:hover {
+  color: var(--vermelho-lt);
+}
+
+/* ===== CONTATO ===== */
+#contato {
+  background-color: var(--creme);
+}
+
+#contato h2 {
+  color: var(--marrom);
+}
+
+#contato .form-label {
+  font-family: 'Lora', serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  color: var(--marrom-md);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+#contato .form-control {
+  background-color: var(--creme-dk);
+  border: 1px solid var(--marrom-lt);
+  border-bottom: 2px solid var(--vermelho);
+  border-radius: 0;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--texto);
+  padding: 0.6rem 0.8rem;
+}
+
+#contato .form-control:focus {
+  border-color: var(--vermelho);
+  background-color: #fff;
+  box-shadow: 0 0 0 0.15rem rgba(139, 26, 26, 0.15);
+}
+
+.btn-enviar {
+  padding: 0.85rem 2.2rem;
+  background-color: var(--marrom);
+  color: var(--creme);
+  font-family: 'Lora', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  letter-spacing: 0.15em;
+  border: 2px solid var(--vermelho);
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus {
+  background-color: var(--vermelho);
+  color: var(--creme);
+  border-color: var(--vermelho);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--marrom);
+  border-top: 3px solid var(--vermelho);
+}
+
+footer p {
+  font-family: 'Satisfy', cursive;
+  font-size: 1.1rem;
+  color: var(--creme-dk);
+}
+
+footer ul a {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: var(--creme-dk);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+footer ul a:hover {
+  color: var(--vermelho-lt);
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-family: 'Lora', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: rgba(250, 243, 224, 0.5);
+}
+
+/* ===== RESPONSIVIDADE EXTRA ===== */
+@media (max-width: 991.98px) {
+  header .navbar-collapse {
+    background-color: var(--marrom);
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--vermelho);
+  }
+
+  header .nav-link {
+    padding: 0.6rem 0.8rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header-hero img {
+    max-height: 320px;
+  }
+
+  .header-texto {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  section p {
+    text-align: left;
+  }
+
+  .tabela-lojas {
+    font-size: 0.88rem;
+  }
+
+  .tabela-lojas thead th,
+  .tabela-lojas tbody td {
+    padding: 0.7rem 0.9rem;
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header-hero img {
+    max-height: 260px;
+  }
+
+  header .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
